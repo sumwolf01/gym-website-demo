@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PowerFit Gym — Premium Fitness Club | Transform Your Body, Transform Your Life</title>
+<meta name="description" content="PowerFit Gym is a premium fitness club with certified trainers, modern equipment, and personalized programs. Join today — memberships from ₹999/month.">
+<meta name="keywords" content="gym, fitness club, personal training, yoga, crossfit, weight loss, membership, powerfit gym">
+<meta name="author" content="PowerFit Gym">
+<link rel="canonical" href="https://www.powerfitgym.example/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="PowerFit Gym — Transform Your Body. Transform Your Life.">
+<meta property="og:description" content="Certified trainers, world-class equipment, and personalized fitness programs. Join PowerFit Gym today.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop">
+<meta property="og:url" content="https://www.powerfitgym.example/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PowerFit Gym — Transform Your Body. Transform Your Life.">
+<meta name="twitter:description" content="Certified trainers, world-class equipment, and personalized fitness programs.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230B0B0B%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 fill=%22%23FF3B30%22 text-anchor=%22middle%22 font-family=%22Arial%22>P</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "PowerFit Gym",
+  "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48",
+  "telephone": "+91-98765-43210",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "221 Fitness Avenue, Salt Lake",
+    "addressLocality": "Kolkata",
+    "addressRegion": "West Bengal",
+    "postalCode": "700091",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo-Su 05:00-23:00",
+  "priceRange": "₹999 - ₹3499"
+}
+</script>
+</head>
+<body>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div id="loading-screen" aria-hidden="true">
+  <div class="loader-mark">POWER<span>FIT</span></div>
+  <svg class="pulse-loader" viewBox="0 0 220 40" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 20 H70 L82 5 L95 35 L108 20 L118 20 L128 2 L140 38 L150 20 H220" />
+  </svg>
+</div>
+
+<div id="scroll-progress"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header id="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="logo"><span>POWER</span><span class="dot">FIT</span></a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#membership">Membership</a>
+      <a href="#classes">Classes</a>
+      <a href="#trainers">Trainers</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <button class="search-toggle" id="search-toggle" aria-label="Search site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="#membership" class="btn btn-primary btn-sm">Join Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-overlay" id="mobile-overlay"></div>
+<nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#membership">Membership</a>
+  <a href="#classes">Classes</a>
+  <a href="#trainers">Trainers</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#bmi">BMI Calculator</a>
+  <a href="#contact">Contact</a>
+  <a href="#membership" class="btn btn-primary btn-block" style="margin-top:10px;">Join Now</a>
+</nav>
+
+<!-- Search overlay -->
+<div class="search-overlay" id="search-overlay">
+  <button class="search-close" id="search-close" aria-label="Close search">×</button>
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="Search classes, plans, trainers…" autocomplete="off">
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <div class="eyebrow">Premium Fitness Club</div>
+    <h1>Transform Your Body.<br><span class="accent">Transform Your Life.</span></h1>
+    <p>Train with certified coaches using world-class equipment and personalized fitness programs — built around your goals, not a generic plan.</p>
+    <div class="hero-btns">
+      <a href="#membership" class="btn btn-primary">Join Membership</a>
+      <a href="#contact" class="btn btn-outline">Book Free Trial</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="stat-number" data-count="10" data-suffix="+">0</div><div class="stat-label">Years Experience</div></div>
+      <div class="hero-stat"><div class="stat-number" data-count="5000" data-suffix="+">0</div><div class="stat-label">Members</div></div>
+      <div class="hero-stat"><div class="stat-number" data-count="25" data-suffix="+">0</div><div class="stat-label">Certified Trainers</div></div>
+      <div class="hero-stat"><div class="stat-number" data-count="100" data-suffix="+">0</div><div class="stat-label">Fitness Machines</div></div>
+      <div class="hero-stat"><div class="stat-number" data-count="24" data-suffix="/7">0</div><div class="stat-label">Open Daily</div></div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>SCROLL</span><span class="line"></span></div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-media reveal">
+        <img class="lazy" data-src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=900&auto=format&fit=crop" alt="Interior of PowerFit Gym training floor">
+        <div class="badge-exp">
+          <div class="stat-number" data-count="10" data-suffix="+">0</div>
+          <div class="stat-label">Years helping members<br>reach real results</div>
+        </div>
+      </div>
+      <div class="about-copy reveal">
+        <div class="eyebrow">About PowerFit</div>
+        <h2>Built for people who are serious about showing up</h2>
+        <p>PowerFit Gym started with one idea: fitness should be guided, not guessed. What began as a single training floor has grown into a full performance club — cardio, strength, recovery, and nutrition, all under one roof, all backed by certified coaches.</p>
+        <p>Our mission is simple — give every member a clear, personalized path to their goal, and the equipment and coaching to actually get there. Our vision is to be the club people recommend before they're even asked.</p>
+        <div class="mission-vision">
+          <div class="mv-card"><h4>Mission</h4><p>Make expert-guided training accessible, consistent, and genuinely enjoyable for every member.</p></div>
+          <div class="mv-card"><h4>Vision</h4><p>Become the most trusted performance club in the city — one honest result at a time.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-strip reveal">
+      <div class="stat-block"><div class="stat-number" data-count="10" data-suffix="+">0</div><div class="stat-label">Years Experience</div></div>
+      <div class="stat-block"><div class="stat-number" data-count="5000" data-suffix="+">0</div><div class="stat-label">Members</div></div>
+      <div class="stat-block"><div class="stat-number" data-count="25" data-suffix="+">0</div><div class="stat-label">Certified Trainers</div></div>
+      <div class="stat-block"><div class="stat-number" data-count="100" data-suffix="+">0</div><div class="stat-label">Fitness Machines</div></div>
+      <div class="stat-block"><div class="stat-number" data-count="24" data-suffix="/7">0</div><div class="stat-label">Open</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="pulse-divider"><svg viewBox="0 0 900 60" preserveAspectRatio="none"><path d="M0 30 H300 L330 8 L360 52 L390 30 L420 30 L450 4 L480 56 L510 30 H900"/></svg></div>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section id="why-us">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow" style="justify-content:center;">Why Choose Us</div>
+      <h2>Everything a serious training program needs</h2>
+      <p>From certified coaching to full recovery amenities — nothing here is an afterthought.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"/><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg></div>
+        <h4>Certified Trainers</h4><p>Every coach is nationally certified and trained in program design.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M6 7h12M9 4v3M15 4v3M6 20h12M9 17v3M15 17v3M4 10h16v4H4z"/></svg></div>
+        <h4>Modern Equipment</h4><p>100+ machines refreshed regularly to match current training standards.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h4>Nutrition Guidance</h4><p>Meal direction that fits your schedule, not a one-size template.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg></div>
+        <h4>Personal Training</h4><p>One-on-one sessions built around your specific goal and timeline.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M2 12h4l2-8 4 16 2-8h8"/></svg></div>
+        <h4>Cardio Zone</h4><p>A dedicated floor of treadmills, bikes, and rowers with city views.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="4" y="10" width="4" height="8"/><rect x="10" y="4" width="4" height="14"/><rect x="16" y="8" width="4" height="10"/></svg></div>
+        <h4>Weight Training</h4><p>Full free-weight and plate-loaded section for serious lifters.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 4l16 16M4 20L20 4"/></svg></div>
+        <h4>CrossFit</h4><p>A dedicated rig for functional, high-intensity conditioning work.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg></div>
+        <h4>Yoga</h4><p>A quiet studio space for mobility, breathwork, and recovery.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="7" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><path d="M2 21c0-3 2.5-5 5-5s5 2 5 5M12 21c0-3 2.5-5 5-5s5 2 5 5"/></svg></div>
+        <h4>Group Classes</h4><p>High-energy sessions led live by our coaching team, daily.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 14a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v3H4z"/><path d="M8 10V6a4 4 0 0 1 8 0v4"/></svg></div>
+        <h4>Steam &amp; Shower</h4><p>Full recovery amenities included with every membership tier.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg></div>
+        <h4>Locker Facility</h4><p>Secure personal lockers, upgraded to VIP for Elite members.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="11" width="18" height="8" rx="2"/><path d="M7 11V8a5 5 0 0 1 10 0v3"/></svg></div>
+        <h4>Free Parking</h4><p>Dedicated on-site parking for every member, every visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEMBERSHIP ============ -->
+<section id="membership">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow" style="justify-content:center;">Membership Plans</div>
+      <h2>Pick the plan that matches your goal</h2>
+      <p>No lock-in surprises — upgrade, downgrade, or pause anytime.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <div class="price-plan">Starter</div>
+        <div class="price-value">₹999<span>/month</span></div>
+        <div class="price-desc">For members who just want reliable gym access.</div>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Gym Access</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Cardio Area</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Locker</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Water Station</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline btn-block">Choose Starter</a>
+      </div>
+
+      <div class="price-card featured reveal">
+        <div class="price-tag">Most Popular</div>
+        <div class="price-plan">Premium</div>
+        <div class="price-value">₹1999<span>/month</span></div>
+        <div class="price-desc">Our most-picked plan — full training support included.</div>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Everything in Starter</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Group Classes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Personal Trainer</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Nutrition Plan</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-block">Choose Premium</a>
+      </div>
+
+      <div class="price-card reveal">
+        <div class="price-plan">Elite</div>
+        <div class="price-value">₹3499<span>/month</span></div>
+        <div class="price-desc">Full-service coaching for members chasing a serious result.</div>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Unlimited Access</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>VIP Locker</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Sauna</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Personal Coach</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Diet Consultation</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Priority Support</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline btn-block">Choose Elite</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLASSES ============ -->
+<section id="classes">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Classes</div>
+      <h2>Live, coach-led sessions every day</h2>
+      <p>Filter by style and reserve your spot — all levels welcome.</p>
+    </div>
+    <div class="class-tabs reveal">
+      <button class="class-tab active" data-filter="all">All</button>
+      <button class="class-tab" data-filter="mind-body">Mind &amp; Body</button>
+      <button class="class-tab" data-filter="strength">Strength</button>
+      <button class="class-tab" data-filter="cardio">Cardio</button>
+    </div>
+    <div class="class-grid">
+
+      <div class="class-card reveal" data-category="mind-body">
+        <div class="class-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=700&auto=format&fit=crop" alt="Yoga class"><span class="class-badge">Mind &amp; Body</span></div>
+        <div class="class-body">
+          <h4>Yoga</h4><p>Breath-led flows to build mobility and calm.</p>
+          <div class="class-meta"><span>Trainer: <strong>Ananya Roy</strong></span><span>45 min</span></div>
+          <div class="class-meta"><span>Mon · Wed · Fri, 7:00 AM</span></div>
+          <a href="#contact" class="btn btn-outline btn-sm btn-block">Join Class</a>
+        </div>
+      </div>
+
+      <div class="class-card reveal" data-category="strength">
+        <div class="class-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=700&auto=format&fit=crop" alt="CrossFit training"><span class="class-badge">Strength</span></div>
+        <div class="class-body">
+          <h4>CrossFit</h4><p>Functional, high-intensity strength and conditioning.</p>
+          <div class="class-meta"><span>Trainer: <strong>Rohan Mehta</strong></span><span>50 min</span></div>
+          <div class="class-meta"><span>Tue · Thu · Sat, 6:30 AM</span></div>
+          <a href="#contact" class="btn btn-outline btn-sm btn-block">Join Class</a>
+        </div>
+      </div>
+
+      <div class="class-card reveal" data-category="cardio">
+        <div class="class-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=700&auto=format&fit=crop" alt="HIIT class"><span class="class-badge">Cardio</span></div>
+        <div class="class-body">
+          <h4>HIIT</h4><p>Short, intense intervals for maximum calorie burn.</p>
+          <div class="class-meta"><span>Trainer: <strong>Karan Kapoor</strong></span><span>35 min</span></div>
+          <div class="class-meta"><span>Mon · Wed · Fri, 6:00 PM</span></div>
+          <a href="#contact" class="btn btn-outline btn-sm btn-block">Join Class</a>
+        </div>
+      </div>
+
+      <div class="class-card reveal" data-category="strength">
+        <div class="class-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=700&auto=format&fit=crop" alt="Strength training"><span class="class-badge">Strength</span></div>
+        <div class="class-body">
+          <h4>Strength Training</h4><p>Progressive overload with barbell fundamentals.</p>
+          <div class="class-meta"><span>Trainer: <strong>Vikram Singh</strong></span><span>55 min</span></div>
+          <div class="class-meta"><span>Daily, 5:30 PM</span></div>
+          <a href="#contact" class="btn btn-outline btn-sm btn-block">Join Class</a>
+        </div>
+      </div>
+
+      <div class="class-card reveal" data-category="strength">
+        <div class="class-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1584466977773-e625c37cdd50?q=80&w=700&auto=format&fit=crop" alt="Bodybuilding class"><span class="class-badge">Strength</span></div>
+        <div class="class-body">
+          <h4>Bodybuilding</h4><p>Hypertrophy-focused splits for size and symmetry.</p>
+          <div class="class-meta"><span>Trainer: <strong>Vikram Singh</strong></span><span>60 min</span></div>
+          <div class="class-meta"><span>Tue · Thu, 7:00 PM</span></div>
+          <a href="#contact" class="btn btn-outline btn-sm btn-block">Join Class</a>
+        </div>
+      </div>
+
+      <div class="class-card reveal" data-category="cardio">
+        <div class="class-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=700&auto=format&fit=crop" alt="Cardio class"><span class="class-badge">Cardio</span></div>
+        <div class="class-body">
+          <h4>Cardio</h4><p>Treadmill and rower intervals to build endurance.</p>
+          <div class="class-meta"><span>Trainer: <strong>Karan Kapoor</strong></span><span>40 min</span></div>
+          <div class="class-meta"><span>Daily, 7:00 AM</span></div>
+          <a href="#contact" class="btn btn-outline btn-sm btn-block">Join Class</a>
+        </div>
+      </div>
+
+      <div class="class-card reveal" data-category="cardio">
+        <div class="class-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=700&auto=format&fit=crop" alt="Zumba dance class"><span class="class-badge">Cardio</span></div>
+        <div class="class-body">
+          <h4>Zumba</h4><p>Dance-cardio that doesn't feel like a workout.</p>
+          <div class="class-meta"><span>Trainer: <strong>Ananya Roy</strong></span><span>45 min</span></div>
+          <div class="class-meta"><span>Wed · Sat, 6:00 PM</span></div>
+          <a href="#contact" class="btn btn-outline btn-sm btn-block">Join Class</a>
+        </div>
+      </div>
+
+      <div class="class-card reveal" data-category="mind-body">
+        <div class="class-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=700&auto=format&fit=crop" alt="Pilates class"><span class="class-badge">Mind &amp; Body</span></div>
+        <div class="class-body">
+          <h4>Pilates</h4><p>Core-focused control work for posture and stability.</p>
+          <div class="class-meta"><span>Trainer: <strong>Ananya Roy</strong></span><span>45 min</span></div>
+          <div class="class-meta"><span>Tue · Thu, 8:00 AM</span></div>
+          <a href="#contact" class="btn btn-outline btn-sm btn-block">Join Class</a>
+        </div>
+      </div>
+
+      <div class="class-card reveal" data-category="cardio">
+        <div class="class-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1549476464-37392f717541?q=80&w=700&auto=format&fit=crop" alt="Kickboxing class"><span class="class-badge">Cardio</span></div>
+        <div class="class-body">
+          <h4>Kickboxing</h4><p>Pad-and-bag conditioning for power and reflexes.</p>
+          <div class="class-meta"><span>Trainer: <strong>Rohan Mehta</strong></span><span>50 min</span></div>
+          <div class="class-meta"><span>Mon · Fri, 7:30 PM</span></div>
+          <a href="#contact" class="btn btn-outline btn-sm btn-block">Join Class</a>
+        </div>
+      </div>
+
+      <div class="class-card reveal" data-category="strength">
+        <div class="class-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1517964603305-4f8c96912a8f?q=80&w=700&auto=format&fit=crop" alt="Functional training class"><span class="class-badge">Strength</span></div>
+        <div class="class-body">
+          <h4>Functional Training</h4><p>Real-world movement patterns for everyday strength.</p>
+          <div class="class-meta"><span>Trainer: <strong>Rohan Mehta</strong></span><span>50 min</span></div>
+          <div class="class-meta"><span>Mon · Wed, 5:00 PM</span></div>
+          <a href="#contact" class="btn btn-outline btn-sm btn-block">Join Class</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="pulse-divider"><svg viewBox="0 0 900 60" preserveAspectRatio="none"><path d="M0 30 H300 L330 8 L360 52 L390 30 L420 30 L450 4 L480 56 L510 30 H900"/></svg></div>
+
+<!-- ============ TRAINERS ============ -->
+<section id="trainers">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow" style="justify-content:center;">Our Trainers</div>
+      <h2>Certified coaches, real accountability</h2>
+      <p>Every trainer is certified, specialized, and available for 1-on-1 coaching.</p>
+    </div>
+    <div class="trainer-grid">
+      <div class="trainer-card reveal">
+        <div class="trainer-media">
+          <img class="lazy" data-src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=500&auto=format&fit=crop" alt="Trainer Rohan Mehta">
+          <div class="trainer-social">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><path d="M12 16v-3a2 2 0 0 1 4 0v3"/></svg></a>
+          </div>
+        </div>
+        <div class="trainer-body">
+          <h4>Rohan Mehta</h4>
+          <div class="trainer-role">Head Strength Coach</div>
+          <div class="trainer-meta">8 yrs experience<br>CSCS · CrossFit L2<br>Specialty: Functional &amp; CrossFit</div>
+        </div>
+      </div>
+
+      <div class="trainer-card reveal">
+        <div class="trainer-media">
+          <img class="lazy" data-src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=500&auto=format&fit=crop" alt="Trainer Ananya Roy">
+          <div class="trainer-social">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><path d="M12 16v-3a2 2 0 0 1 4 0v3"/></svg></a>
+          </div>
+        </div>
+        <div class="trainer-body">
+          <h4>Ananya Roy</h4>
+          <div class="trainer-role">Yoga &amp; Mobility Lead</div>
+          <div class="trainer-meta">6 yrs experience<br>RYT-500 Certified<br>Specialty: Yoga &amp; Pilates</div>
+        </div>
+      </div>
+
+      <div class="trainer-card reveal">
+        <div class="trainer-media">
+          <img class="lazy" data-src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=500&auto=format&fit=crop" alt="Trainer Karan Kapoor">
+          <div class="trainer-social">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><path d="M12 16v-3a2 2 0 0 1 4 0v3"/></svg></a>
+          </div>
+        </div>
+        <div class="trainer-body">
+          <h4>Karan Kapoor</h4>
+          <div class="trainer-role">Cardio &amp; HIIT Coach</div>
+          <div class="trainer-meta">5 yrs experience<br>ACE Certified<br>Specialty: HIIT &amp; Endurance</div>
+        </div>
+      </div>
+
+      <div class="trainer-card reveal">
+        <div class="trainer-media">
+          <img class="lazy" data-src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=500&auto=format&fit=crop" alt="Trainer Vikram Singh">
+          <div class="trainer-social">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><path d="M12 16v-3a2 2 0 0 1 4 0v3"/></svg></a>
+          </div>
+        </div>
+        <div class="trainer-body">
+          <h4>Vikram Singh</h4>
+          <div class="trainer-role">Bodybuilding Coach</div>
+          <div class="trainer-meta">10 yrs experience<br>NASM-CPT<br>Specialty: Hypertrophy &amp; Strength</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BMI CALCULATOR ============ -->
+<section id="bmi">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow" style="justify-content:center;">Free Tool</div>
+      <h2>Check your BMI</h2>
+      <p>A quick starting point — not a diagnosis. Talk to a trainer for a full assessment.</p>
+    </div>
+    <div class="bmi-wrap reveal">
+      <form class="bmi-form" id="bmi-form">
+        <div class="unit-toggle">
+          <button type="button" class="active" data-unit="metric">Metric (cm / kg)</button>
+          <button type="button" data-unit="imperial">Imperial (in / lb)</button>
+        </div>
+        <div class="field" id="bmi-height-field">
+          <label for="bmi-height">Height (cm)</label>
+          <input type="number" id="bmi-height" placeholder="e.g. 175" min="1" step="0.1" required>
+        </div>
+        <div class="field" id="bmi-weight-field">
+          <label for="bmi-weight">Weight (kg)</label>
+          <input type="number" id="bmi-weight" placeholder="e.g. 70" min="1" step="0.1" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Calculate BMI</button>
+      </form>
+      <div class="bmi-result">
+        <p class="bmi-placeholder" id="bmi-placeholder">Enter your height and weight to see your BMI, category, and a starting suggestion.</p>
+        <div class="bmi-value" id="bmi-value" style="display:none;">0.0</div>
+        <div class="bmi-category" id="bmi-category" style="display:none;"></div>
+        <div class="bmi-meter"><div class="bmi-meter-fill" id="bmi-meter-fill"></div></div>
+        <div class="bmi-scale"><span>15</span><span>18.5</span><span>25</span><span>30</span><span>40+</span></div>
+        <p class="bmi-suggestion" id="bmi-suggestion" style="display:none;"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FACILITIES ============ -->
+<section id="facilities">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow" style="justify-content:center;">Facilities</div>
+      <h2>Everything you need, on-site</h2>
+    </div>
+    <div class="facility-grid">
+      <div class="facility-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M2 12h20M6 12v4M18 12v4M9 12V8a3 3 0 0 1 6 0v4"/></svg><p>Air Conditioning</p></div>
+      <div class="facility-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="10" width="4" height="8"/><rect x="10" y="4" width="4" height="14"/><rect x="16" y="8" width="4" height="10"/></svg><p>Premium Equipment</p></div>
+      <div class="facility-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg><p>Changing Rooms</p></div>
+      <div class="facility-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2v6M8 4l1 2M16 4l-1 2M6 12h12l-2 8H8z"/></svg><p>Showers</p></div>
+      <div class="facility-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="11" width="18" height="8" rx="2"/><path d="M7 11V8a5 5 0 0 1 10 0v3"/></svg><p>Free Parking</p></div>
+      <div class="facility-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M8 4h8l2 6-6 10-6-10z"/></svg><p>Protein Bar</p></div>
+      <div class="facility-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5.5 5.5 0 0 1 7 0M12 20h.01"/></svg><p>Free WiFi</p></div>
+      <div class="facility-card reveal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><p>Music System</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="pulse-divider"><svg viewBox="0 0 900 60" preserveAspectRatio="none"><path d="M0 30 H300 L330 8 L360 52 L390 30 L420 30 L450 4 L480 56 L510 30 H900"/></svg></div>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Transformations</div>
+      <h2>Real members. Real results.</h2>
+      <p>Filter by goal, click any photo to view it larger.</p>
+    </div>
+    <div class="gallery-filters reveal">
+      <button class="class-tab gallery-filter active" data-filter="all">All</button>
+      <button class="class-tab gallery-filter" data-filter="weight-loss">Weight Loss</button>
+      <button class="class-tab gallery-filter" data-filter="muscle-gain">Muscle Gain</button>
+      <button class="class-tab gallery-filter" data-filter="fitness">Fitness</button>
+      <button class="class-tab gallery-filter" data-filter="bodybuilding">Bodybuilding</button>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal" data-category="weight-loss"><img class="lazy" data-src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600&auto=format&fit=crop" alt="Weight loss transformation"><div class="gallery-overlay"><span>Weight Loss · -18kg</span></div></div>
+      <div class="gallery-item reveal" data-category="muscle-gain"><img class="lazy" data-src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=600&auto=format&fit=crop" alt="Muscle gain transformation"><div class="gallery-overlay"><span>Muscle Gain · +8kg lean</span></div></div>
+      <div class="gallery-item reveal" data-category="fitness"><img class="lazy" data-src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=600&auto=format&fit=crop" alt="General fitness progress"><div class="gallery-overlay"><span>Fitness · 6 months</span></div></div>
+      <div class="gallery-item reveal" data-category="bodybuilding"><img class="lazy" data-src="https://images.unsplash.com/photo-1584466977773-e625c37cdd50?q=80&w=600&auto=format&fit=crop" alt="Bodybuilding transformation"><div class="gallery-overlay"><span>Bodybuilding · Stage prep</span></div></div>
+      <div class="gallery-item reveal" data-category="weight-loss"><img class="lazy" data-src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=600&auto=format&fit=crop" alt="Weight loss journey"><div class="gallery-overlay"><span>Weight Loss · -12kg</span></div></div>
+      <div class="gallery-item reveal" data-category="fitness"><img class="lazy" data-src="https://images.unsplash.com/photo-1549476464-37392f717541?q=80&w=600&auto=format&fit=crop" alt="Fitness progress"><div class="gallery-overlay"><span>Fitness · Consistency win</span></div></div>
+      <div class="gallery-item reveal" data-category="muscle-gain"><img class="lazy" data-src="https://images.unsplash.com/photo-1517964603305-4f8c96912a8f?q=80&w=600&auto=format&fit=crop" alt="Muscle gain progress"><div class="gallery-overlay"><span>Muscle Gain · +5kg lean</span></div></div>
+      <div class="gallery-item reveal" data-category="bodybuilding"><img class="lazy" data-src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=600&auto=format&fit=crop" alt="Bodybuilding progress"><div class="gallery-overlay"><span>Bodybuilding · Off-season</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+  <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">‹</button>
+  <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-next" id="lightbox-next" aria-label="Next">›</button>
+</div>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow" style="justify-content:center;">Success Stories</div>
+      <h2>What our members say</h2>
+    </div>
+    <div class="testimonial-slider reveal">
+      <div class="testimonial-track">
+        <div class="testimonial-slides" id="testimonial-slides">
+          <div class="testimonial-slide">
+            <div class="t-card">
+              <div class="t-stars">★★★★★</div>
+              <p class="t-quote">"I've tried three gyms before this one — PowerFit is the first place where the trainers actually track my progress every week."</p>
+              <div class="t-person">
+                <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?q=80&w=100&auto=format&fit=crop" alt="Priya Sharma">
+                <div><h5>Priya Sharma</h5><span>Marketing Manager</span></div>
+              </div>
+              <div class="t-result">Lost 14kg in 5 months</div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="t-card">
+              <div class="t-stars">★★★★★</div>
+              <p class="t-quote">"The Elite plan's personal coaching completely changed how I train. Worth every rupee."</p>
+              <div class="t-person">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop" alt="Arjun Nair">
+                <div><h5>Arjun Nair</h5><span>Software Engineer</span></div>
+              </div>
+              <div class="t-result">Gained 7kg lean muscle</div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="t-card">
+              <div class="t-stars">★★★★★</div>
+              <p class="t-quote">"Group classes here have a completely different energy. I actually look forward to 6am HIIT now."</p>
+              <div class="t-person">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop" alt="Sneha Reddy">
+                <div><h5>Sneha Reddy</h5><span>College Student</span></div>
+              </div>
+              <div class="t-result">Consistent for 8 months straight</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-arrow" id="slider-prev" aria-label="Previous testimonial">‹</button>
+        <div class="slider-dots" id="slider-dots"></div>
+        <button class="slider-arrow" id="slider-next" aria-label="Next testimonial">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOG ============ -->
+<section id="blog">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Fitness Blog</div>
+      <h2>Training notes from our coaches</h2>
+    </div>
+    <div class="blog-grid">
+      <article class="blog-card reveal">
+        <div class="blog-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=600&auto=format&fit=crop" alt="Muscle building tips"></div>
+        <div class="blog-body">
+          <span class="blog-tag">Strength</span>
+          <h4>Top 10 Muscle Building Tips</h4>
+          <p>The fundamentals our coaches actually use with new members — no shortcuts, just consistency.</p>
+          <div class="blog-meta"><span>Coach Vikram · 6 min read</span><a href="#" class="blog-read">Read →</a></div>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=600&auto=format&fit=crop" alt="Diet for beginners"></div>
+        <div class="blog-body">
+          <span class="blog-tag">Nutrition</span>
+          <h4>Best Diet for Beginners</h4>
+          <p>A simple starting framework before you overthink macros and meal timing.</p>
+          <div class="blog-meta"><span>Coach Ananya · 5 min read</span><a href="#" class="blog-read">Read →</a></div>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=600&auto=format&fit=crop" alt="Strength training importance"></div>
+        <div class="blog-body">
+          <span class="blog-tag">Strength</span>
+          <h4>Why Strength Training Matters</h4>
+          <p>It's not just about muscle — here's what it does for metabolism and joint health.</p>
+          <div class="blog-meta"><span>Coach Rohan · 7 min read</span><a href="#" class="blog-read">Read →</a></div>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=600&auto=format&fit=crop" alt="Morning vs evening workout"></div>
+        <div class="blog-body">
+          <span class="blog-tag">Training</span>
+          <h4>Morning vs Evening Workout</h4>
+          <p>What actually matters more than time of day when it comes to results.</p>
+          <div class="blog-meta"><span>Coach Karan · 4 min read</span><a href="#" class="blog-read">Read →</a></div>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=600&auto=format&fit=crop" alt="Fat loss effectively"></div>
+        <div class="blog-body">
+          <span class="blog-tag">Nutrition</span>
+          <h4>How to Lose Fat Effectively</h4>
+          <p>The training and nutrition combination our Premium members use most.</p>
+          <div class="blog-meta"><span>Coach Ananya · 6 min read</span><a href="#" class="blog-read">Read →</a></div>
+        </div>
+      </article>
+      <article class="blog-card reveal">
+        <div class="blog-media"><img class="lazy" data-src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=600&auto=format&fit=crop" alt="Recovery and rest days"></div>
+        <div class="blog-body">
+          <span class="blog-tag">Recovery</span>
+          <h4>Why Rest Days Aren't Optional</h4>
+          <p>Recovery is where the actual adaptation happens — here's how to plan it.</p>
+          <div class="blog-meta"><span>Coach Vikram · 5 min read</span><a href="#" class="blog-read">Read →</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow" style="justify-content:center;">FAQ</div>
+      <h2>Questions, answered</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question">What are your opening hours?<span class="faq-icon"></span></button>
+        <div class="faq-answer"><p>We're open 24/7, every day of the year. Staffed hours are 5:00 AM – 11:00 PM; after that, members use keycard access.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can beginners join?<span class="faq-icon"></span></button>
+        <div class="faq-answer"><p>Absolutely — most of our members started as complete beginners. Every plan includes an orientation session with a trainer.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you provide trainers?<span class="faq-icon"></span></button>
+        <div class="faq-answer"><p>Yes. Premium and Elite plans include personal trainer sessions, and Starter members can book pay-per-session coaching anytime.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you offer diet plans?<span class="faq-icon"></span></button>
+        <div class="faq-answer"><p>Premium includes a nutrition plan, and Elite includes full one-on-one diet consultation with our in-house nutrition coach.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I freeze my membership?<span class="faq-icon"></span></button>
+        <div class="faq-answer"><p>Yes — every plan allows one free freeze of up to 30 days per year for travel, injury, or other commitments.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Contact</div>
+      <h2>Come see the gym for yourself</h2>
+      <p>Book a free trial or ask us anything — we usually reply within a few hours.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><h5>Address</h5><p>221 Fitness Avenue, Salt Lake, Kolkata, WB 700091</p></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2.1z"/></svg></div>
+            <div><h5>Phone</h5><p>+91 98765 43210</p></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg></div>
+            <div><h5>Email</h5><p>hello@powerfitgym.example</p></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+            <div><h5>Opening Hours</h5><p>Open 24/7 · Staffed 5:00 AM – 11:00 PM</p></div>
+          </div>
+        </div>
+        <div class="contact-social">
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 20l1.1-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="3"/><polygon points="10 9 15 12 10 15"/></svg></a>
+        </div>
+        <div class="map-embed">
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=88.40%2C22.55%2C88.44%2C22.59&layer=mapnik" loading="lazy" title="Gym location map"></iframe>
+        </div>
+      </div>
+
+      <div class="contact-form reveal">
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="cf-name">Full Name</label>
+              <input type="text" id="cf-name" required>
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" required>
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="cf-phone">Phone</label>
+              <input type="tel" id="cf-phone" required>
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="cf-plan">Membership Plan</label>
+              <select id="cf-plan">
+                <option>Starter — ₹999/month</option>
+                <option selected>Premium — ₹1999/month</option>
+                <option>Elite — ₹3499/month</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="cf-goal">Fitness Goal</label>
+              <select id="cf-goal">
+                <option>Weight Loss</option>
+                <option>Muscle Gain</option>
+                <option>General Fitness</option>
+                <option>Bodybuilding</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="cf-time">Preferred Time</label>
+              <select id="cf-time">
+                <option>Early Morning (5–8 AM)</option>
+                <option>Morning (8–11 AM)</option>
+                <option>Evening (5–8 PM)</option>
+                <option>Night (8–11 PM)</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" required></textarea>
+            <span class="field-error"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        </form>
+        <div class="form-success" id="form-success">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>
+          <h4>Message sent</h4>
+          <p>Thanks — a member of our team will get back to you shortly to confirm your free trial.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="newsletter-bar reveal">
+      <h3>Get training tips &amp; offers in your inbox</h3>
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span>POWER</span><span class="dot">FIT</span></div>
+        <p>A premium fitness club built on certified coaching, real equipment, and honest results.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="3"/><polygon points="10 9 15 12 10 15"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#classes">Classes</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#bmi">BMI Calculator</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 PowerFit Gym. All rights reserved.</span>
+      <span>Designed as a client demo template · Not a real business.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING BUTTONS ============ -->
+<a href="https://wa.me/919876543210" id="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.1.2-.3.2-.4.1-.1 0-.3 0-.4-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.3-.8.8-.8 1.9s.8 2.2.9 2.4c.1.1 1.6 2.5 4 3.4.6.2 1 .4 1.3.5.6.2 1.1.1 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.5-.3zM12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2z"/></svg>
+</a>
+<button id="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
